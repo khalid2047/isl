@@ -23,10 +23,10 @@ export default function Header() {
     "PRODUCTS": "/products",
     "INQUIRIES": "/inquiries",
     "INVESTORS": "/investors",
-    "ANNUAL REPORT 2025": "/annual report 2025",
-    "ISL CUSTOMER PORTAL": "/isl customer portal",
-    "BLOG": "/blog",
-    "MEDIA": "/careers",
+    "ANNUAL REPORT 2025": "#",
+    "ISL CUSTOMER PORTAL": "#",
+    "BLOG": "#",
+    "MEDIA": "#",
   };
 
   return (
