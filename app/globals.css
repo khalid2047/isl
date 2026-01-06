@@ -9,9 +9,30 @@
     transform: translateX(0);
   }
 }
+.clip-left {
+  clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
+}
 
-.animate-slideIn {
-  animation: slideIn 0.4s ease-out forwards;
+.clip-right {
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 55% 100%);
+}
+
+/* SKEW CARD */
+.skew-card {
+  position: relative;
+}
+
+.skew-card::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #6b747f;
+  transform: skewX(-25deg);
+  z-index: 0;
 }
 
 

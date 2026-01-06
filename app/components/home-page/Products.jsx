@@ -35,9 +35,9 @@ export default function ProductsSection() {
   return (
     <section className="bg-white">
        {/* Section Title */}
-        <h2 className="text-white bg-green-700 text-center py-3 text-lg md:text-xl font-semibold  py-9">
+        <h1 className="text-white bg-green-700 text-center py-3 text-lg md:text-x1 font-semibold  py-9">
           PRODUCTS & VALUE-ADDED SERVICES OFFERED
-        </h2>
+        </h1>
       <div className="mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {products.map((product, index) => (

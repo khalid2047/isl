@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { FaFacebookF, FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#10853f] text-white font-sans">
@@ -71,10 +71,10 @@ const Footer = () => {
           </div>
           {/* Social Icons Placeholder */}
           <div className="flex gap-4 mt-6 text-xl">
-            <span className="cursor-pointer hover:opacity-70">f</span>
-            <span className="cursor-pointer hover:opacity-70">in</span>
-            <span className="cursor-pointer hover:opacity-70">y</span>
-            <span className="cursor-pointer hover:opacity-70">ig</span>
+            <span className="cursor-pointer hover:opacity-70"><FaFacebookF /></span>
+            <span className="cursor-pointer hover:opacity-70"> <FaYoutube /></span>
+            <span className="cursor-pointer hover:opacity-70"> <FaLinkedin /></span>
+            <span className="cursor-pointer hover:opacity-70"> <FaInstagram /></span>
           </div>
         </div>
       </div>
