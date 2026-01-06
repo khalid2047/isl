@@ -54,15 +54,15 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header className="h-20 flex items-center justify-between px-4 md:px-10 bg-transparent relative z-40">
+      <header className="h-20 flex items-center justify-between px-4 md:px-10 bg-transparent relative z-40 pt-10">
         {/* LOGO */}
         <div className="flex-none md:flex-1">
           <Link href="/">
             <Image
               src="/images/isl_logo.svg"
               alt="ISL Logo"
-              width={140}
-              height={40}
+              width={180}
+              height={60}
               priority
             />
           </Link>

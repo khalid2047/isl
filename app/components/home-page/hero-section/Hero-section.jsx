@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* Background YouTube Video */}
       <div className="absolute inset-0 pointer-events-none">
         <iframe
-          className="w-[250%] h-[300%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video"
+          className="w-[250%] h-[310%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video"
           src="https://www.youtube.com/embed/bHwGakPZo6M?si=0NBHorYxnvnA9POI&autoplay=1&mute=1&loop=1&playlist=bHwGakPZo6M&controls=0&showinfo=0&rel=0"
           title="Background Video"
           allow="autoplay; encrypted-media"
@@ -21,7 +21,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-white">
         
         {/* Center Capital Text */}
-        <div className="PT-7 flex-grow flex flex-col justify-center items-center text-center">
+        <div className="pt-40 flex-grow flex flex-col justify-center items-center text-center">
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-widest">
             LARGEST FLAT ROLLED STEET<br/>MANUFACTURER AND <br/> EXPORTER OF PAKISTAN
           </h2>
