@@ -35,15 +35,16 @@ export default function ProductsSection() {
   return (
     <section className="bg-white">
        {/* Section Title */}
-        <h1 className="text-white bg-green-700 text-center py-3 text-lg md:text-x1 font-semibold  py-9">
-          PRODUCTS & VALUE-ADDED SERVICES OFFERED
-        </h1>
+        <h1 className="text-white bg-green-700 text-center py-9 font-semibold text-[35px]">
+  PRODUCTS & VALUE-ADDED SERVICES OFFERED
+</h1>
+
       <div className="mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {products.map((product, index) => (
             <div
               key={index}
-              className={`relative bg-[#eef1ef] px-6 py-10 text-center flex flex-col items-center
+              className={`relative bg-[#eef1ef] px-6 py-10 text-center flex flex-col items-center py-18
               ${index !== products.length - 1 ? `
                 after:content-['']
                 after:absolute
@@ -88,10 +89,10 @@ export default function ProductsSection() {
                 <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
                   Explore
                 </button>
-                <button className="border border-gray-400 text-gray-600 px-5 py-2 rounded-full hover:bg-gray-200 transition">
+                <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
                   Get Inquiry
                 </button>
-                <button className="border border-gray-400 text-gray-600 px-5 py-2 rounded-full hover:bg-gray-200 transition">
+                <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
                   Brochure
                 </button>
               </div>

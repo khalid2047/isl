@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const menuData = {
     "ABOUT US": ["Vision", "Mission", "Core Values", "Strategic Objectives", "Shaping Tomorrow", "Journey & Milestones", "Global Footprints", "Partners"],
@@ -18,7 +19,6 @@ export default function Header() {
     "CONTACT US": ["Disclaimer", "Privacy Policy"],
   };
 
-  // Navigation items with their specific page links
   const navItems = {
     "PRODUCTS": "/products",
     "INQUIRIES": "/inquiries",
@@ -29,39 +29,60 @@ export default function Header() {
     "MEDIA": "#",
   };
 
+  // Scroll event for sticky header background
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* HEADER */}
-      <header className=" h-20 flex items-center justify-between px-4 md:px-10 bg-transparent relative z-40 pt-10">
-        {/* LOGO */}
-        <div className="flex-none md:flex-1">
-          <Link href="/">
-            <Image src="/images/isl_logo.svg" alt="ISL Logo" width={180} height={60} priority />
-          </Link>
-        </div>
-
-        {/* CENTER NAV */}
-        <nav className="hidden lg:flex justify-center gap-8 text-white text-sm font-medium">
-          {Object.entries(navItems).map(([name, href]) => (
-            <Link
-              key={name}
-              href={href}
-              className="relative group hover:text-green-300 transition"
-            >
-              {name}
-              <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-300 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+      <header
+        className={`fixed top-0 left-0 z-50 transition-colors duration-300 w-full ${
+          scrolled ? "bg-green-700" : "bg-transparent"
+        } flex items-center justify-center py-3 `}
+      >
+        <div className="flex items-center justify-center gap-6">
+          {/* LOGO */}
+          <div className="flex-none">
+            <Link href="/">
+              <Image
+                src="/images/isl_logo.svg"
+                alt="ISL Logo"
+                width={180}
+                height={60}
+                priority
+              />
             </Link>
-          ))}
-        </nav>
+          </div>
 
-        {/* HAMBURGER */}
-        <div className="flex-none md:flex-1 flex justify-end">
-          <button
-            onClick={() => setOpen(true)}
-            className="w-11 h-11 rounded-full border border-white text-white flex items-center justify-center text-lg hover:bg-white hover:text-green-800 transition"
-          >
-            ☰
-          </button>
+          {/* NAVIGATION (Desktop only) */}
+          <nav className="hidden lg:flex justify-center gap-10 text-white  px-20">
+            {Object.entries(navItems).map(([name, href]) => (
+              <Link
+                key={name}
+                href={href}
+                className="relative group hover:text-green-300 transition"
+              >
+                {name}
+                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-300 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+              </Link>
+            ))}
+          </nav>
+
+          {/* HAMBURGER (Desktop + Mobile) */}
+          <div className="flex-none flex justify-center">
+            <button
+              onClick={() => setOpen(true)}
+              className="w-11 h-11 rounded-full border border-white text-white flex items-center justify-center text-lg hover:bg-white hover:text-green-800 transition"
+            >
+              ☰
+            </button>
+          </div>
         </div>
       </header>
 
@@ -78,7 +99,6 @@ export default function Header() {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* SINGLE SCROLL CONTAINER */}
         <div className="flex flex-col md:flex-row h-full w-full overflow-y-auto">
           {/* LEFT GREEN */}
           <div className="w-full md:w-[70%] bg-gradient-to-br from-[#02341a] to-[#128c45] p-6 md:p-14 relative">
@@ -98,7 +118,15 @@ export default function Header() {
                   <ul className="space-y-2">
                     {items.map((item) => (
                       <li key={item}>
-                        <Link href={`/${category.toLowerCase().replace(/ & /g, "-").replace(/\s+/g, "-")}/${item.toLowerCase().replace(/\s+/g, "-")}`} className="block text-white text-[13px] md:text-[14px] hover:text-green-300 transition">
+                        <Link
+                          href={`/${category
+                            .toLowerCase()
+                            .replace(/ & /g, "-")
+                            .replace(/\s+/g, "-")}/${item
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}`}
+                          className="block text-white text-[13px] md:text-[14px] hover:text-green-300 transition"
+                        >
                           {item}
                         </Link>
                       </li>
@@ -120,7 +148,9 @@ export default function Header() {
                 className="w-full bg-white/10 p-2.5 text-xs text-white placeholder-gray-400 outline-none mb-3"
               />
 
-              <button className="w-full bg-green-600 hover:bg-green-700 py-2.5 text-xs font-semibold transition">Subscribe →</button>
+              <button className="w-full bg-green-600 hover:bg-green-700 py-2.5 text-xs font-semibold transition">
+                Subscribe →
+              </button>
             </div>
 
             <div className="mt-10 space-y-6 text-xs opacity-90">

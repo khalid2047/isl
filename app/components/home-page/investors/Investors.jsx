@@ -15,7 +15,7 @@ const InvestorsSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
-        <h2 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] mb-8 uppercase">
+        <h2 className="text-5xl md:text-6xl font-extralight mb-8 ">
           Investors
         </h2>
         

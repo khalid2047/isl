@@ -16,8 +16,9 @@ export default function LifeAtISL() {
 
       {/* Content */}
       <div className="relative max-w-5xl mx-auto px-4 text-center text-white">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          LIFE AT ISL
+        {/* <h2 className="text-4xl md:text-5xl font-bold mb-6"> */}
+             <h2 className="text-5xl md:text-6xl font-extralight  mb-8">
+          Life at ISL
         </h2>
 
         <p className="text-base md:text-lg leading-relaxed mb-10 text-gray-200">

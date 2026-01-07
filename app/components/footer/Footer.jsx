@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaFacebookF, FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-[#10853f] text-white font-sans">
+    <footer className="bg-green-700 text-white font-sans">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         
@@ -80,7 +80,7 @@ const Footer = () => {
       </div>
 
       {/* Certification Logos Section */}
-      <div className="bg-[#10853f] border-t border-white/10 py-6">
+      <div className="bg-green-700 border-t border-white/10 py-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-6">
           <div className="flex gap-4 items-center">
               <img src="images/imgi_7_Group-1153.png" alt="Group" className="h-10" />
@@ -93,7 +93,7 @@ const Footer = () => {
 
       {/* Bottom Black Bar */}
       <div className="bg-[#333333] text-[11px] py-4">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-80">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-80 text-[15px]">
           <p>© International Steels Limited 2022 - 2024. All Rights Reserved. - Maintained by A2Z Creatorz</p>
           <div className="flex gap-4 mt-2 md:mt-0">
             <span className="hover:text-white cursor-pointer">Contact Us</span>

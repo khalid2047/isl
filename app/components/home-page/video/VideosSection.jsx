@@ -2,14 +2,14 @@
 
 export default function VideosSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* LEFT VIDEO */}
           <div className="lg:col-span-6">
-            <h2 className="text-2xl font-bold text-green-700 mb-4">
+            <h2 className="text-3xl font-bold text-black-700 mb-8">
               ISL Corporate Overview
             </h2>
 
@@ -27,7 +27,8 @@ export default function VideosSection() {
 
           {/* RIGHT VIDEO */}
           <div className="lg:col-span-6">
-            <h2 className="text-2xl font-bold text-green-700 mb-4">
+            
+            <h2 className="text-3xl font-bold text-black-700 mb-8">
               ISL Manufacturing Process
             </h2>
 

@@ -26,8 +26,8 @@ export default function Sustainability() {
     <section className="w-full bg-white font-sans">
       {/* Top Content Area */}
       <div className="max-w-5xl mx-auto px-4 py-16 text-center">
-       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-widest text-gray-600 mb-8 text-center">
-  SUSTAINABILITY
+        <h2 className="text-5xl md:text-6xl font-extralight mb-8">
+  Sustainability
 </h2>
 
         <p className="text-gray-500 leading-relaxed text-lg max-w-4xl mx-auto">

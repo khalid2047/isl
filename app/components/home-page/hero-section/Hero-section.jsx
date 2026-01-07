@@ -4,7 +4,7 @@ import { FaFacebookF, FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen -mt-[90px] overflow-hidden">
+    <section className="relative h-screen -mt-[0px] overflow-hidden">
       {/* Background YouTube Video */}
       <div className="absolute inset-0 pointer-events-none">
         <iframe
