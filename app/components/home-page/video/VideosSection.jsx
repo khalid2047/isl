@@ -9,7 +9,7 @@ export default function VideosSection() {
           
           {/* LEFT VIDEO */}
           <div className="lg:col-span-6">
-            <h2 className="text-3xl font-bold text-black-700 mb-8">
+            <h2 className="text-3xl text-black-700 mb-8">
               ISL Corporate Overview
             </h2>
 
@@ -28,7 +28,7 @@ export default function VideosSection() {
           {/* RIGHT VIDEO */}
           <div className="lg:col-span-6">
             
-            <h2 className="text-3xl font-bold text-black-700 mb-8">
+            <h2 className="text-3xl text-black-700 mb-8">
               ISL Manufacturing Process
             </h2>
 

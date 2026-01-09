@@ -20,13 +20,13 @@ export default function Header() {
   };
 
   const navItems = {
-    "PRODUCTS": "/products",
-    "INQUIRIES": "/inquiries",
-    "INVESTORS": "/investors",
-    "ANNUAL REPORT 2025": "#",
-    "ISL CUSTOMER PORTAL": "#",
-    "BLOG": "#",
-    "MEDIA": "#",
+    "Products": "/products",
+    "Inquiries": "/inquiries",
+    "Investors": "/investors",
+    "Annual Report 2025": "#",
+    "Isl Customer Portal": "#",
+    "Blog": "#",
+    "Media": "#",
   };
 
   // Scroll event for sticky header background
@@ -40,51 +40,56 @@ export default function Header() {
 
   return (
     <>
-      {/* HEADER */}
-      <header
-        className={`fixed top-0 left-0 z-50 transition-colors duration-300 w-full ${
-          scrolled ? "bg-green-700" : "bg-transparent"
-        } flex items-center justify-center py-3 `}
+{/* HEADER */}
+<header
+  className={`fixed top-0 left-0 z-50 w-full transition-colors duration-300 ${
+    scrolled ? "bg-green-700" : "bg-transparent"
+  }`}
+>
+  {/* MAIN CONTAINER */}
+  <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-2 ">
+
+    {/* LOGO */}
+    <div className="flex-none">
+      <Link href="/">
+        <Image
+          src="/images/isl_logo.svg"
+          alt="ISL Logo"
+          width={180}
+          height={60}
+          priority
+        />
+      </Link>
+    </div>
+
+    {/* NAVIGATION (Desktop only) */}
+    <nav className="hidden lg:flex">
+      <div className="flex gap-10 text-white font-oswald  text-[18px]">
+        {Object.entries(navItems).map(([name, href]) => (
+          <Link
+            key={name}
+            href={href}
+            className="relative group hover:text-green-300 transition"
+          >
+            {name}
+            <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-300 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
+          </Link>
+        ))}
+      </div>
+    </nav>
+
+    {/* HAMBURGER */}
+    <div className="flex-none">
+      <button
+        onClick={() => setOpen(true)}
+        className="w-11 h-11 rounded-full border border-white text-white flex items-center justify-center text-lg hover:bg-white hover:text-green-800 transition"
       >
-        <div className="flex items-center justify-center gap-6">
-          {/* LOGO */}
-          <div className="flex-none">
-            <Link href="/">
-              <Image
-                src="/images/isl_logo.svg"
-                alt="ISL Logo"
-                width={180}
-                height={60}
-                priority
-              />
-            </Link>
-          </div>
+        ☰
+      </button>
+    </div>
 
-          {/* NAVIGATION (Desktop only) */}
-          <nav className="hidden lg:flex justify-center gap-10 text-white  px-20">
-            {Object.entries(navItems).map(([name, href]) => (
-              <Link
-                key={name}
-                href={href}
-                className="relative group hover:text-green-300 transition"
-              >
-                {name}
-                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-green-300 scale-x-0 group-hover:scale-x-100 transition origin-left"></span>
-              </Link>
-            ))}
-          </nav>
-
-          {/* HAMBURGER (Desktop + Mobile) */}
-          <div className="flex-none flex justify-center">
-            <button
-              onClick={() => setOpen(true)}
-              className="w-11 h-11 rounded-full border border-white text-white flex items-center justify-center text-lg hover:bg-white hover:text-green-800 transition"
-            >
-              ☰
-            </button>
-          </div>
-        </div>
-      </header>
+  </div>
+</header>
 
       {/* MODAL */}
       <div

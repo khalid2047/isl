@@ -1,13 +1,21 @@
 import "./globals.css";
 
 import Footer from "@/app/components/footer/Footer";
-import { Poppins } from 'next/font/google';
 import Header from "./components/header/Header";
+import { Oswald, Lato } from "next/font/google";
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // jo weights chahiye
-  display: 'swap',
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-lato",
+  display: "swap",
 });
 
 export const metadata = {
@@ -25,8 +33,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+    <html lang="en" className={`${oswald.variable} ${lato.variable}`}>
+      <body className="font-lato">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

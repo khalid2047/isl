@@ -35,7 +35,7 @@ export default function ProductsSection() {
   return (
     <section className="bg-white">
        {/* Section Title */}
-        <h1 className="text-white bg-green-700 text-center py-9 font-semibold text-[35px]">
+        <h1 className="text-white bg-green-700 text-center py-9  md:text-[45px] text-2xl sm:text-3xl">
   PRODUCTS & VALUE-ADDED SERVICES OFFERED
 </h1>
 
@@ -64,7 +64,7 @@ export default function ProductsSection() {
               ` : ""}`}
             >
               {/* Title */}
-              <h3 className="text-green-700 font-bold text-xl mb-6">
+              <h3 className="text-green-700  mb-6 text-[25px] ">
                 {product.title}
               </h3>
 

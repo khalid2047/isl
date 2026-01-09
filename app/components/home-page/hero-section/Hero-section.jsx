@@ -22,14 +22,14 @@ export default function HeroSection() {
         
         {/* Center Capital Text */}
         <div className="pt-40 flex-grow flex flex-col justify-center items-center text-center">
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-widest">
+          <h2 className="text-2xl sm:text-3xl md:text-7xl  uppercase tracking-widest">
             LARGEST FLAT ROLLED STEET<br/>MANUFACTURER AND <br/> EXPORTER OF PAKISTAN
           </h2>
           
         </div>
 
         {/* Bottom Social Links */}
-        <nav className="flex space-x-6 p-6 mb-8 text-white text-xl md:text-2xl">
+        <nav className="flex space-x-6 p-6 mb-8 text-white text-xl md:text-2xl sm:p-3">
           <a
             href="https://www.facebook.com/internationalsteelslimited"
             target="_blank"

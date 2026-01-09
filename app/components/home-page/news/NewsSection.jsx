@@ -6,7 +6,7 @@ export default function NewsSection() {
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Heading */}
-       <h2 className="text-5xl md:text-6xl font-extralight mb-8 ">
+       <h2 className="text-5xl md:text-6xl  mb-8 ">
           News & Events
         </h2>
 

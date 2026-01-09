@@ -5,7 +5,7 @@ import { FaArrowRight, FaBriefcase } from "react-icons/fa";
 export default function LifeAtISL() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-24"
+      className="relative bg-cover bg-center bg-no-repeat py-50"
       style={{
         backgroundImage:
           "url('images/life-with-isl.png')",
@@ -29,22 +29,23 @@ export default function LifeAtISL() {
           from discrimination and biases of any nature.
         </p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 justify-center">
-          
-          {/* Learn More */}
-          <button className="inline-flex items-center gap-3 bg-green-700 hover:bg-green-800 transition px-8 py-4 rounded-full text-white font-semibold tracking-wide">
-            Learn More
-            <FaArrowRight className="text-lg" />
-          </button>
+{/* Buttons */}
+<div className="flex flex-row flex-wrap gap-5 justify-center">
+  
+  {/* Learn More */}
+  <button className="inline-flex items-center gap-3 bg-green-700 hover:bg-green-800 transition px-8 py-4 rounded-full text-white font-semibold tracking-wide text-center">
+    Learn More
+    <FaArrowRight className="text-lg" />
+  </button>
 
-          {/* Apply Now */}
-          <button className="inline-flex items-center gap-3 bg-white text-green-700 hover:bg-gray-100 transition px-8 py-4 rounded-full font-semibold tracking-wide">
-            Apply Now
-            <FaBriefcase className="text-lg" />
-          </button>
+  {/* Apply Now */}
+  <button className="inline-flex items-center gap-3 bg-white text-green-700 hover:bg-gray-100 transition px-8 py-4 rounded-full font-semibold tracking-wide text-center">
+    Apply Now
+    <FaBriefcase className="text-lg" />
+  </button>
 
-        </div>
+</div>
+
       </div>
     </section>
   );
