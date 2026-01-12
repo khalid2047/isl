@@ -1,3 +1,91 @@
+// "use client";
+
+// import Image from "next/image";
+
+// const products = [
+//   {
+//     title: "COLD ROLLED\nSTEEL",
+//     image: "/images/cold-rolled.png",
+//     description:
+//       "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
+//   },
+//   {
+//     title: "Hot Dipped Galvanized\nSTEEL",
+//     image: "/images/Hot_Dip_img.png",
+//     description:
+//       "Our Hot Rolled steel products are produced with precision and high-quality standards...",
+//   },
+//   {
+//     title: "GALVANIZED\nSTEEL",
+//     image: "/images/galvanized.png",
+//     description:
+//       "Galvanized steel with excellent corrosion resistance suitable for multiple applications...",
+//   },
+//   {
+//     title: "SERVICE\nCENTER",
+//     image: "/images/service-center.png",
+//     description:
+//       "Color coated steel products that combine aesthetics and durability for your projects...",
+//   },
+// ];
+
+// export default function ProductsSection() {
+//   return (
+//     <section className="bg-white">
+//       {/* Section Title */}
+//       <h1 className="text-white bg-green-700 text-center py-9 md:text-[45px] text-2xl sm:text-3xl font-bold">
+//         PRODUCTS & VALUE-ADDED SERVICES OFFERED
+//       </h1>
+
+//       {/* Products Grid */}
+//       <div className="mx-auto">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+//           {products.map((product, index) => (
+//             <div
+//               key={index}
+//               className="relative bg-[#eef1ef] px-6 py-10 text-center flex flex-col items-center rounded-md shadow-md"
+//             >
+//               {/* Title */}
+//               <h3 className="text-green-700 mb-6 text-2xl md:text-[37px] whitespace-pre-line">
+//                 {product.title}
+//               </h3>
+
+//               {/* Image */}
+//               <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6">
+//                 <Image
+//                   src={product.image}
+//                   alt={product.title}
+//                   fill
+//                   className="object-contain"
+//                 />
+//               </div>
+
+//               {/* Description */}
+//               <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+//                 {product.description}
+//               </p>
+
+//               {/* Buttons */}
+//               <div className="flex gap-2 flex-wrap justify-center mt-auto">
+//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+//                   Explore
+//                 </button>
+//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+//                   Get Inquiry
+//                 </button>
+//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+//                   Brochure
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 
 "use client";
 

@@ -47,8 +47,11 @@ export default function Header() {
   }`}
 >
   {/* MAIN CONTAINER */}
-  <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-2 ">
-
+  <div
+  className={`max-w-7xl mx-auto flex items-center justify-between px-2 transition-all duration-300 ${
+    scrolled ? "py-3" : "py-8"
+  }`}
+>
     {/* LOGO */}
     <div className="flex-none">
       <Link href="/">
