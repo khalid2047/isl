@@ -93,26 +93,43 @@ import Image from "next/image";
 
 export default function ProductsSection() {
   const products = [
+  {
+    title: (
+      <>
+        COLD ROLLED <br /> STEEL
+      </>
+    ),
+    image: "/images/colled-rolled.png",
+    description:
+      "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
+  },
     {
-      title: "COLD ROLLED STEEL",
-      image: "/images/cold-rolled.png",
-      description:
-        "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
-    },
-    {
-      title: "HOT DIPPED GALVANIZED STEEL",
-      image: "/images/Hot_Dip_img.png",
+       title: (
+      <>
+        HOT DIPPED<br /> GALVANIZED STEEL
+      </>
+    ),
+   
+      image: "/images/hot-dip.png",
       description:
         "Galvanization is the process of applying a protective zinc coating to steel, to prevent rust and corrosion...",
     },
     {
-      title: "COLOR COATED STEEL",
-      image: "/images/color_coated_coil_img.png",
+         title: (
+      <>
+        COLOR COATED<br /> STEEL
+      </>
+    ),
+      image: "/images/Color-Coated.png",
       description:
         "Color Coated Steel is ISL’s high value-added product. Polyester (PE), Polyvinylidene Difluoride (PVDF)...",
     },
     {
-      title: "SERVICE CENTER",
+         title: (
+      <>
+       SERVICE<br /> CENTER
+      </>
+         ),
       image: "/images/service-center.png",
       description:
         "ISL Service Center shapes flat rolled steel into various forms for a wide range of industrial and commercial applications...",
@@ -141,7 +158,7 @@ export default function ProductsSection() {
                 after:w-[80px]
                 after:h-full
                 after:bg-gradient-to-r
-                after:from-black/20
+                after:from-black/5
                 after:via-black/10
                 after:to-transparent
                 after:skew-y-[-12deg]
@@ -152,7 +169,7 @@ export default function ProductsSection() {
               ` : ""}`}
             >
               {/* Title */}
-              <h3 className="text-green-700  mb-6 text-[25px] ">
+              <h3 className="text-green-700  mb-6 text-[35px] ">
                 {product.title}
               </h3>
 
