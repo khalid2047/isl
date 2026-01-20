@@ -154,7 +154,7 @@ export default function ProductsSection() {
                 after:content-['']
                 after:absolute
                 after:top-0
-                after:right-[-40px]
+                after:right-[-55px]
                 after:w-[80px]
                 after:h-full
                 after:bg-gradient-to-r
