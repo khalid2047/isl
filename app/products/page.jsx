@@ -6,7 +6,7 @@ export default function Products() {
     <div className="w-full h-screen relative">
       <Link href="/">
         <Image
-          src="/images/product-banner.png"
+          src="/images/product-banner.jpg"
           alt="product"
           fill
           className="object-cover"
