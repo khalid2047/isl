@@ -6,7 +6,7 @@ export default function investors() {
     <div className=" w-full h-screen relative">
       <Link href="/">
         <Image
-          src="/images/investors.png"
+          src="/images/investors.jpg"
           alt="product"
           fill
           className="object-cover"
