@@ -87,12 +87,12 @@ export default function ProductsSection() {
       </h3>
 
       {/* IMAGE */}
-      <div className="relative w-24 h-24 md:w-64 md:h-64 mb-2 float-left">
+      <div className="relative w-24 h-24 md:w-64 md:h-64 mb-2 hover:-translate-y-2 transition-transform duration-300">
         <Image
           src={product.image}
           alt="product"
           fill
-          className="object-contain"
+          className="object-contain "
         />
       </div>
 
