@@ -1,209 +1,122 @@
-// "use client";
-
-// import Image from "next/image";
-
-// const products = [
-//   {
-//     title: "COLD ROLLED\nSTEEL",
-//     image: "/images/cold-rolled.png",
-//     description:
-//       "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
-//   },
-//   {
-//     title: "Hot Dipped Galvanized\nSTEEL",
-//     image: "/images/Hot_Dip_img.png",
-//     description:
-//       "Our Hot Rolled steel products are produced with precision and high-quality standards...",
-//   },
-//   {
-//     title: "GALVANIZED\nSTEEL",
-//     image: "/images/galvanized.png",
-//     description:
-//       "Galvanized steel with excellent corrosion resistance suitable for multiple applications...",
-//   },
-//   {
-//     title: "SERVICE\nCENTER",
-//     image: "/images/service-center.png",
-//     description:
-//       "Color coated steel products that combine aesthetics and durability for your projects...",
-//   },
-// ];
-
-// export default function ProductsSection() {
-//   return (
-//     <section className="bg-white">
-//       {/* Section Title */}
-//       <h1 className="text-white bg-green-700 text-center py-9 md:text-[45px] text-2xl sm:text-3xl font-bold">
-//         PRODUCTS & VALUE-ADDED SERVICES OFFERED
-//       </h1>
-
-//       {/* Products Grid */}
-//       <div className="mx-auto">
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-//           {products.map((product, index) => (
-//             <div
-//               key={index}
-//               className="relative bg-[#eef1ef] px-6 py-10 text-center flex flex-col items-center rounded-md shadow-md"
-//             >
-//               {/* Title */}
-//               <h3 className="text-green-700 mb-6 text-2xl md:text-[37px] whitespace-pre-line">
-//                 {product.title}
-//               </h3>
-
-//               {/* Image */}
-//               <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6">
-//                 <Image
-//                   src={product.image}
-//                   alt={product.title}
-//                   fill
-//                   className="object-contain"
-//                 />
-//               </div>
-
-//               {/* Description */}
-//               <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-//                 {product.description}
-//               </p>
-
-//               {/* Buttons */}
-//               <div className="flex gap-2 flex-wrap justify-center mt-auto">
-//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
-//                   Explore
-//                 </button>
-//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
-//                   Get Inquiry
-//                 </button>
-//                 <button className="border border-gray-400 text-gray-600 px-3 py-2 rounded-full hover:bg-gray-200 transition">
-//                   Brochure
-//                 </button>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
 "use client";
 
 import Image from "next/image";
 
 export default function ProductsSection() {
   const products = [
-  {
-    title: (
-      <>
-        COLD ROLLED <br /> STEEL
-      </>
-    ),
-    image: "/images/colled-rolled.png",
-    description:
-      "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
-  },
     {
-       title: (
-      <>
-        HOT DIPPED<br /> GALVANIZED STEEL
-      </>
-    ),
-   
+      title: (
+        <>
+          COLD ROLLED <br /> STEEL
+        </>
+      ),
+      image: "/images/colled-rolled.png",
+      description:
+        "ISL's Cold Rolled steel is manufactured on a modern, state-of-the-art Cold Rolling mill designed by SMS Siemag...",
+    },
+    {
+      title: (
+        <>
+          HOT DIPPED <br /> GALVANIZED STEEL
+        </>
+      ),
       image: "/images/hot-dip.png",
       description:
         "Galvanization is the process of applying a protective zinc coating to steel, to prevent rust and corrosion...",
     },
     {
-         title: (
-      <>
-        COLOR COATED<br /> STEEL
-      </>
-    ),
+      title: (
+        <>
+          COLOR COATED <br /> STEEL
+        </>
+      ),
       image: "/images/Color-Coated.png",
       description:
         "Color Coated Steel is ISL’s high value-added product. Polyester (PE), Polyvinylidene Difluoride (PVDF)...",
     },
     {
-         title: (
-      <>
-       SERVICE<br /> CENTER
-      </>
-         ),
+      title: (
+        <>
+          SERVICE <br /> CENTER
+        </>
+      ),
       image: "/images/service-center.png",
       description:
         "ISL Service Center shapes flat rolled steel into various forms for a wide range of industrial and commercial applications...",
-      icons: true,
     },
   ];
 
   return (
     <section className="bg-white">
-       {/* Section Title */}
-        <h1 className="text-white bg-green-700 text-center py-9  md:text-[45px] text-2xl sm:text-3xl">
-  PRODUCTS & VALUE-ADDED SERVICES OFFERED
-</h1>
+      <h1 className="text-white bg-green-700 text-center py-9 md:text-[45px] text-[30]">
+        PRODUCTS & VALUE-ADDED SERVICES OFFERED
+      </h1>
 
       <div className="mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className={`relative bg-[#eef1ef] px-6 py-10 text-center flex flex-col items-center py-18
-              ${index !== products.length - 1 ? `
-                after:content-['']
-                after:absolute
-                after:top-0
-                after:right-[-55px]
-                after:w-[80px]
-                after:h-full
-                after:bg-gradient-to-r
-                after:from-black/5
-                after:via-black/10
-                after:to-transparent
-                after:skew-y-[-12deg]
-                after:origin-left
-                after:blur-sm
-                after:pointer-events-none
-                hidden lg:flex
-              ` : ""}`}
-            >
-              {/* Title */}
-              <h3 className="text-green-700  mb-6 text-[35px] ">
-                {product.title}
-              </h3>
+        {/* ✅ MOBILE: 2x2 = 4 PRODUCTS */}
+       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+  {products.map((product, index) => (
+    <div
+      key={index}
+      className={`relative bg-[#eef1ef] px-3 py-4 md:px-4 md:py-8
+      text-center flex flex-col items-center
+      ${
+        index !== products.length - 1
+          ? `
+          lg:after:content-['']
+          lg:after:absolute
+          lg:after:top-0
+          lg:after:right-[-55px]
+          lg:after:w-[80px]
+          lg:after:h-full
+          lg:after:bg-gradient-to-r
+          lg:after:from-black/5
+          lg:after:via-black/10
+          lg:after:to-transparent
+          lg:after:skew-y-[-12deg]
+          lg:after:origin-left
+          lg:after:blur-sm
+          lg:after:pointer-events-none
+        `
+          : ""
+      }`}
+    >
+      {/* TITLE */}
+      <h3 className="text-green-700 mb-2 text-[14px] md:text-[35px] leading-tight md:py-15">
+        {product.title}
+      </h3>
 
-              {/* Image */}
-              <div className="relative w-64 h-64 mb-6">
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-contain"
-                />
-              </div>
+      {/* IMAGE */}
+      <div className="relative w-24 h-24 md:w-64 md:h-64 mb-2 float-left">
+        <Image
+          src={product.image}
+          alt="product"
+          fill
+          className="object-contain"
+        />
+      </div>
 
-              {/* Description */}
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                {product.description}
-              </p>
+      {/* DESCRIPTION */}
+      <p className="text-gray-600 text-[11px] md:text-sm mb-3 leading-snug">
+        {product.description}
+      </p>
 
-             
-              {/* Buttons */}
-              <div className="flex gap-1 flex-wrap justify-center mt-auto">
-                <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
-                  Explore
-                </button>
-                <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
-                  Get Inquiry
-                </button>
-                <button className="border border-gray-400 text-gray-600 px-2 py-2 rounded-full hover:bg-gray-200 transition">
-                  Brochure
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* BUTTONS */}
+      <div className="flex gap-1 flex-wrap justify-center mt-auto md:pb-15">
+        <button className="border border-gray-400 text-gray-600 px-2 py-1 rounded-full text-[11px] md:text-[14px] hover:bg-green-700 hover:text-white transition md:text-[17px] md:p-3">
+          Explore
+        </button>
+        <button className="border border-gray-400 text-gray-600 px-2 py-1 rounded-full text-[11px] md:text-[14px] hover:bg-green-700 hover:text-white transition md:text-[17px]">
+          Inquiry
+        </button>
+        <button className="border border-gray-400 text-gray-600 px-2 py-1 rounded-full text-[11px] md:text-[14px] hover:bg-green-700 hover:text-white transition md:text-[17px]">
+          Brochure
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
